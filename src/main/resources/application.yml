@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:mysql://47.98.141.26:3306/question?characterEncoding=utf-8&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      connection-timeout: 5000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      maximum-pool-size: 8
+      minimum-idle: 3
+      pool-name: defaultJpaPool
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    open-in-view: false
+    database-platform: org.hibernate.dialect.MySQL55Dialect
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 10
+          order_inserts: true
+          order_updates: true
