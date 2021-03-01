@@ -1,4 +1,4 @@
-package com.jkwl.question.entity.problem;
+package com.jkwl.question.entity.question;
 
 import com.jkwl.question.entity.IdEntity;
 import org.hibernate.annotations.SortNatural;
@@ -8,7 +8,7 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 
 @Entity
-public class Blank extends IdEntity implements ComplexChildAllow {
+public class Blank extends IdEntity {
 
     @OneToMany(mappedBy = "blank", cascade = CascadeType.ALL, orphanRemoval = true)
     @SortNatural

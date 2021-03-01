@@ -1,7 +1,6 @@
-package com.jkwl.question.entity.problem;
+package com.jkwl.question.entity.question;
 
 import com.jkwl.question.entity.IdEntity;
-import com.jkwl.question.entity.question.QuestionDifficultyDegreeEnumConverter;
 import com.jkwl.question.enums.QuestionDifficultyDegreeEnum;
 import com.jkwl.question.enums.QuestionTypeEnum;
 import org.hibernate.annotations.DynamicUpdate;
@@ -15,7 +14,7 @@ import java.time.LocalDateTime;
 @DynamicUpdate
 @EntityListeners(AuditingEntityListener.class)
 @MappedSuperclass
-public class AbstractProblem extends IdEntity {
+public abstract class AbstractProblem extends IdEntity {
     @Enumerated(value = EnumType.STRING)
     @Column(name = "type", nullable = false)
     private QuestionTypeEnum type = QuestionTypeEnum.UNKNOWN_CHOICE;

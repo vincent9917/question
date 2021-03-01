@@ -1,4 +1,4 @@
-package com.jkwl.question.entity.problem;
+package com.jkwl.question.entity.question;
 
 import com.jkwl.question.entity.IdEntity;
 

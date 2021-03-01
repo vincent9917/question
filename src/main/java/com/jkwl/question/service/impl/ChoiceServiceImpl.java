@@ -2,7 +2,7 @@ package com.jkwl.question.service.impl;
 
 import com.jkwl.question.common.BusinessException;
 import com.jkwl.question.config.assembler.AssemblerFactory;
-import com.jkwl.question.entity.problem.Choice;
+import com.jkwl.question.entity.question.Choice;
 import com.jkwl.question.enums.QuestionDifficultyDegreeEnum;
 import com.jkwl.question.enums.QuestionTypeEnum;
 import com.jkwl.question.pojo.out.ChoiceOut;
