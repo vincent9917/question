@@ -1,19 +1,17 @@
-package com.jkwl.question.entity.question;
+package com.jkwl.question.entity.choice;
 
+import com.jkwl.question.entity.AbstractProblem;
+import com.jkwl.question.entity.QuestionAbility;
 import com.jkwl.question.enums.QuestionDifficultyDegreeEnum;
 import com.jkwl.question.enums.QuestionTypeEnum;
-import org.hibernate.annotations.DynamicInsert;
-import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.SortNatural;
 
 import javax.persistence.*;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-@DynamicInsert
-@DynamicUpdate
 @Entity
-public class Choice extends AbstractProblem implements AbstractProblemAbility {
+public class Choice extends AbstractProblem implements QuestionAbility {
 
     @OneToMany(mappedBy = "choice", cascade = CascadeType.ALL, orphanRemoval = true)
     @SortNatural
@@ -62,7 +60,7 @@ public class Choice extends AbstractProblem implements AbstractProblemAbility {
     }
 
     @Override
-    public void answer(AbstractProblemAbility abstractProblem) {
-        System.out.println("选择题答题");
+    public void answer() {
+        System.out.println("回答选择题");
     }
 }

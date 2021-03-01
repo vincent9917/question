@@ -1,6 +1,6 @@
-package com.jkwl.question.entity.question;
+package com.jkwl.question.entity;
 
-import com.jkwl.question.entity.IdEntity;
+import com.jkwl.question.entity.question.QuestionDifficultyDegreeEnumConverter;
 import com.jkwl.question.enums.QuestionDifficultyDegreeEnum;
 import com.jkwl.question.enums.QuestionTypeEnum;
 import org.hibernate.annotations.DynamicUpdate;
@@ -40,7 +40,7 @@ public abstract class AbstractProblem extends IdEntity {
     protected AbstractProblem() {
     }
 
-    public AbstractProblem(QuestionTypeEnum type, String content, String explanation, QuestionDifficultyDegreeEnum difficultyDegree) {
+    protected AbstractProblem(QuestionTypeEnum type, String content, String explanation, QuestionDifficultyDegreeEnum difficultyDegree) {
         this.type = type;
         this.content = content;
         this.explanation = explanation;

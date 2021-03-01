@@ -1,4 +1,4 @@
-package com.jkwl.question.entity.question;
+package com.jkwl.question.entity.choice;
 
 import com.jkwl.question.entity.IdEntity;
 
@@ -49,7 +49,7 @@ public class ChoiceOption extends IdEntity implements Comparable<ChoiceOption> {
         return choice;
     }
 
-    public void setChoice(Choice choice) {
+    protected void setChoice(Choice choice) {
         this.choice = choice;
     }
 

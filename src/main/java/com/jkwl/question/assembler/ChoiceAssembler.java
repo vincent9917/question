@@ -1,8 +1,8 @@
 package com.jkwl.question.assembler;
 
 import com.jkwl.question.config.assembler.Assembler;
-import com.jkwl.question.entity.question.Choice;
-import com.jkwl.question.entity.question.ChoiceOption;
+import com.jkwl.question.entity.choice.Choice;
+import com.jkwl.question.entity.choice.ChoiceOption;
 import com.jkwl.question.enums.OptionChoiceEnum;
 import com.jkwl.question.pojo.out.ChoiceOptionOut;
 import com.jkwl.question.pojo.out.ChoiceOut;
