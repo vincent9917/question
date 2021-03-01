@@ -3,7 +3,6 @@ package com.jkwl.question.entity.question;
 import com.jkwl.question.entity.IdEntity;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 @Entity
 @Table(name = "`option`",

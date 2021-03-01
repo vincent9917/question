@@ -8,7 +8,7 @@ import com.jkwl.question.pojo.in.*;
 import com.jkwl.question.pojo.out.QuestionAnswerOut;
 import com.jkwl.question.pojo.out.QuestionOut;
 import com.jkwl.question.repository.QuestionRepository;
-import com.jkwl.question.service.IQuestionService;
+import com.jkwl.question.service.QuestionService;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
@@ -18,7 +18,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
-public class QuestionServiceImpl implements IQuestionService {
+public class QuestionServiceImpl implements QuestionService {
 
     private final QuestionRepository questionRepository;
 

@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Set;
 
 //TODO Entity只允许生存在Service内，所以只能返回DTO
-public interface IQuestionService {
+public interface QuestionService {
 
     //TODO 可能存在空值的用Optional
     // Service返回如果可能存在空值返回Optional,如果是Collection返回EmptyList、EmptySet

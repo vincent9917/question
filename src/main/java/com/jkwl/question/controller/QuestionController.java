@@ -4,7 +4,7 @@ import com.jkwl.question.common.Result;
 import com.jkwl.question.pojo.in.*;
 import com.jkwl.question.pojo.out.QuestionAnswerOut;
 import com.jkwl.question.pojo.out.QuestionOut;
-import com.jkwl.question.service.IQuestionService;
+import com.jkwl.question.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +16,7 @@ import java.util.List;
 public class QuestionController {
 
     @Autowired
-    private IQuestionService questionService;
+    private QuestionService questionService;
 
     @GetMapping()
     public Result<QuestionOut> find(@RequestParam(value = "id") Long id) {

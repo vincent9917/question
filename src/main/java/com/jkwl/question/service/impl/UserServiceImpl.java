@@ -3,7 +3,7 @@ package com.jkwl.question.service.impl;
 import com.jkwl.question.entity.user.QUser;
 import com.jkwl.question.entity.user.User;
 import com.jkwl.question.repository.UserRepository;
-import com.jkwl.question.service.IUserService;
+import com.jkwl.question.service.UserService;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ import java.util.Optional;
  * 动态查询
  */
 @Service
-public class UserServiceImpl implements IUserService {
+public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
     private final JPAQueryFactory queryFactory;

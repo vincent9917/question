@@ -14,10 +14,9 @@ import com.jkwl.question.pojo.out.TestPaperOut;
 import com.jkwl.question.repository.StudentRepository;
 import com.jkwl.question.repository.TeacherRepository;
 import com.jkwl.question.repository.TestPaperRepository;
-import com.jkwl.question.service.IQuestionService;
-import com.jkwl.question.service.ITestPaperService;
+import com.jkwl.question.service.QuestionService;
+import com.jkwl.question.service.TestPaperService;
 import org.springframework.stereotype.Service;
-import org.springframework.util.CollectionUtils;
 
 import javax.transaction.Transactional;
 import java.util.ArrayList;
@@ -25,15 +24,15 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class TestPaperServiceImpl implements ITestPaperService {
+public class TestPaperServiceImpl implements TestPaperService {
     private final TestPaperRepository testPaperRepository;
     private final TeacherRepository teacherRepository;
     private final StudentRepository studentRepository;
     private final AssemblerFactory assemblerFactory;
-    private final IQuestionService questionService;
+    private final QuestionService questionService;
     public TestPaperServiceImpl(TestPaperRepository testPaperRepository,
                                 AssemblerFactory assemblerFactory,
-                                IQuestionService questionService,
+                                QuestionService questionService,
                                 TeacherRepository teacherRepository,
                                 StudentRepository studentRepository) {
         this.testPaperRepository = testPaperRepository;

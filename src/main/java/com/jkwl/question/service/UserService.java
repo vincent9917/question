@@ -1,6 +1,6 @@
 package com.jkwl.question.service;
 
-public interface IUserService {
+public interface UserService {
     Object find();
     Object findJoin();
 }

@@ -1,5 +1,7 @@
 package com.jkwl.question.enums;
 
+import com.jkwl.question.common.BusinessException;
+
 public enum QuestionTypeEnum {
     //TODO,建议不使用中文,因为易出现如下问题:
     //1.极端情况下修改库时，因为SSH终端问题导致的编码错误引发修改错误
@@ -15,6 +17,10 @@ public enum QuestionTypeEnum {
      */
     MULTIPLE_CHOICE("MULTIPLE_CHOICE"),
     /**
+     * 填空题
+     */
+    BLANK("BLANK"),
+    /**
      * 选择题，用于解决可以先不添加选项的情况
      * UNKNOWN_CHOICE类型不能用于答题
      */
@@ -24,7 +30,7 @@ public enum QuestionTypeEnum {
      * 题的类型
      */
     //TODO 这里用TYPE更为贴切
-    private String type;
+    private final String type;
 
     QuestionTypeEnum(String type) {
         this.type = type;
@@ -33,5 +39,12 @@ public enum QuestionTypeEnum {
     public String getType() {
         return type;
     }
-    //TODO ENUM不应该设置Setter
+
+    public static QuestionTypeEnum ofType(String type){
+        for (QuestionTypeEnum typeEnum:QuestionTypeEnum.values()){
+            if (typeEnum.getType().equals(type))
+                return typeEnum;
+        }
+        throw new BusinessException("题型不存在");
+    }
 }

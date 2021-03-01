@@ -5,8 +5,8 @@ import com.jkwl.question.pojo.in.TestPaperIn;
 import com.jkwl.question.pojo.out.QuestionOut;
 import com.jkwl.question.pojo.out.TestPaperQuestionOut;
 import com.jkwl.question.pojo.out.TestPaperOut;
-import com.jkwl.question.service.IQuestionService;
-import com.jkwl.question.service.ITestPaperService;
+import com.jkwl.question.service.QuestionService;
+import com.jkwl.question.service.TestPaperService;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -15,10 +15,10 @@ import java.util.Set;
 @Component
 public class TestPaperFacadeImpl implements TestPaperFacade {
 
-    private final IQuestionService questionService;
-    private final ITestPaperService testPaperService;
+    private final QuestionService questionService;
+    private final TestPaperService testPaperService;
 
-    public TestPaperFacadeImpl(IQuestionService questionService, ITestPaperService testPaperService) {
+    public TestPaperFacadeImpl(QuestionService questionService, TestPaperService testPaperService) {
         this.questionService = questionService;
         this.testPaperService = testPaperService;
     }
